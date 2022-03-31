@@ -161,9 +161,9 @@ jobs:
         namespace: ${{ env.OPENSHIFT_NAMESPACE }}
         port: ${{ env.APP_PORT }}
         create_pull_secret_from: podman
-        registry_hostname: quay.io
-        registry_username: ${{ secrets.REGISTRY_USER }}
-        registry_password: ${{ secrets.REGISTRY_PASSWORD }}
+        #registry_hostname: quay.io
+        #registry_username: ${{ secrets.REGISTRY_USER }}
+        #registry_password: ${{ secrets.REGISTRY_PASSWORD }}
 
     - name: View application route
       run: |
