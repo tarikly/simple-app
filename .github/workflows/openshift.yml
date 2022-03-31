@@ -131,9 +131,9 @@ jobs:
       with:
         image: ${{ steps.image-build.outputs.image }}
         tags: ${{ steps.image-build.outputs.tags }}
-        registry: ${{ env.REGISTRY }}
-        username: ${{ env.REGISTRY_USER }}
-        password: ${{ env.REGISTRY_PASSWORD }}
+        registry: ${{ secrets.REGISTRY }}
+        username: ${{ secrets.REGISTRY_USER }}
+        password: ${{ secrets.REGISTRY_PASSWORD }}
 
     # The path the image was pushed to is now stored in ${{ steps.push-to-registry.outputs.registry-path }}
 
